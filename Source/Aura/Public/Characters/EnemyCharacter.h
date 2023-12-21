@@ -20,4 +20,7 @@ public:
 	
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+
+	UPROPERTY(EditAnywhere)
+	float CustomDepthStencilValue = 250.f;
 };

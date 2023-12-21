@@ -17,15 +17,23 @@ class AURA_API AAuraPlayerController : public APlayerController
 
 public:
 	AAuraPlayerController();
+
+	virtual void PlayerTick(float DeltaTime) override;
+	
 protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
-
+	
 	void Move(const struct FInputActionValue& InputActionValue);
-private:
+
 	UPROPERTY(EditAnywhere, Category = "Input", meta = (AllowPrivateAccess = true))
 	TObjectPtr<class UInputMappingContext> DefaultMappingContext;
 
 	UPROPERTY(EditAnywhere, Category = "Input", meta = (AllowPrivateAccess = true))
 	TObjectPtr<class UInputAction> MoveAction;
+
+	void CursorTrace();
+
+	class IHighlightInterface* LastActor;
+	class IHighlightInterface* ThisActor;
 };
