@@ -24,6 +24,7 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void SetupInputComponent() override;
 	
+	
 	void Move(const struct FInputActionValue& InputActionValue);
 
 	UPROPERTY(EditAnywhere, Category = "Input", meta = (AllowPrivateAccess = true))
