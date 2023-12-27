@@ -41,8 +41,6 @@ void AAuraPlayerController::SetupInputComponent()
 	}
 }
 
-
-
 void AAuraPlayerController::PlayerTick(float DeltaTime)
 {
 	Super::PlayerTick(DeltaTime);
